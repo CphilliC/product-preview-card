@@ -8,24 +8,33 @@ body {
     font-family: 'Montserrat';
     font-size: 14px;
     padding: 28px 16px;
-    min-width: 375px;
     background-color: hsl(30, 38%, 92%);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 main {
     background-color: hsl(0, 0%, 100%);
-    max-width: 343px;
+    width: 343px;
     margin: 28px 16px;
+    border-radius: 8px;
 }
 
-.perfume-img {
+.mobile-img {
     width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: block;
 }
 
+.desktop-img {
+    display: none;
+}
 .card-info {
     padding: 24px;
 }
@@ -41,6 +50,7 @@ main {
     font-family: 'Fraunces';
     margin: 12px 0 16px;
     line-height: 32px;
+    
 }
 
 .description {
@@ -83,3 +93,28 @@ button {
     font-weight: 700;
     border-radius: 8px;
 }
+
+@media screen and (min-width: 600px) {
+    .mobile-img {
+      display: none;
+    }
+
+    .desktop-img {
+        display: block;
+        height: 450px;
+        width: 300px;
+    }
+
+   main {
+    max-width: 600px;
+   float: left  ;
+    
+   }
+
+   
+
+   
+
+
+    
+  }
